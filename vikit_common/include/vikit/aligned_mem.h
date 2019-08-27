@@ -64,7 +64,7 @@ namespace aligned_mem {
 
   inline void * aligned_alloc(size_t count, size_t alignment){
     void * mem = NULL;
-    assert(posix_memalign(&mem, alignment, count) == 0);
+    posix_memalign(&mem, alignment, count);
     return mem;
   }
 
